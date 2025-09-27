@@ -35,5 +35,5 @@ COPY --from=build /app ./
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 storage bootstrap/cache
 
-EXPOSE 9000
+EXPOSE 80
 CMD ["php-fpm"]
